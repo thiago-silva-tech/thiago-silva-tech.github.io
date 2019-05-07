@@ -10,8 +10,28 @@ body{
 .wrapper{
 	width: 1024px;
 	height: 100vh;
+	max-height: 768px;
 	margin: auto auto;
 	display: flex;
+}
+.navigation{
+	position: relative;
+	top: -25px;
+	right: -25px;
+	display: flex;
+	justify-content: flex-end;
+}
+.navigation ul{
+	width: 175px;
+	background: #F5F5F5;
+	border: 1px solid #1565C0;
+	list-style: none;
+}
+.navigation li{
+	height: 25px;
+	display: block;
+	text-align: right;
+	vertical-align: middle;
 }
 .slider-1{
 	width: 40%;
