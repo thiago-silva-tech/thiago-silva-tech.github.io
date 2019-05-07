@@ -5,4 +5,25 @@
 }
 body{
 	background: #F5F5F5;
+	overflow: hidden;
+}
+.wrapper{
+	width: 1024px;
+	height: 100vh;
+	margin: auto auto;
+	display: flex;
+}
+.slider-1{
+	width: 40%;
+	margin-top: 10%;
+	height: 75%;
+	border: 1px solid #1565C0;
+	border-right: none;
+	border-bottom-width: 7px;
+}
+.slider-2{
+	width: 60%;
+	margin-top: 2.5%;
+	height: 95%;
+	border: 1px solid #1565C0;
 }
