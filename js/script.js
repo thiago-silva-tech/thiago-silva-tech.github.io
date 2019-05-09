@@ -19,8 +19,6 @@ navItems.forEach((el,i) => {
 		
 		el.classList.add('nav-item-selected');
 
-		console.log(indexOfContentSelected);
-
 		slider1Content.forEach((slider1ContentElement) => {
 			if(slider1ContentElement.classList.contains('content-in')){
 				slider1ContentElement.classList.remove('content-in');
@@ -43,6 +41,16 @@ function changeSlider1Content(index){
 
 function changeSlider2Content(index){
 	slider2Content[index].classList.add('content-in');
+
+	if (index == 2){
+		document.querySelectorAll('.progess-bar-status').forEach((skillElement) => {
+			skillElement.parentElement.querySelector('.progess-bar-fill span').style.width = skillElement.innerHTML;
+		});
+	}else{
+		document.querySelectorAll('.progess-bar-status').forEach((skillElement) => {
+			skillElement.parentElement.querySelector('.progess-bar-fill span').style.width = '0';
+		});
+	}
 }
 
 slider1Content.forEach((contentElement) => {
