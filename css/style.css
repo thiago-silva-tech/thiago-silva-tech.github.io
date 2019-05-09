@@ -4,8 +4,11 @@
 	box-sizing: border-box;
 }
 body{
-	background: #F5F5F5;
+	background: #FFFFFF;
 	overflow: hidden;
+}
+h1{
+	display: none;	
 }
 .wrapper{
 	width: 1024px;
@@ -16,34 +19,120 @@ body{
 }
 .navigation{
 	position: relative;
-	top: -25px;
-	right: -25px;
 	display: flex;
 	justify-content: flex-end;
+	z-index: 100;
 }
 .navigation ul{
 	width: 175px;
-	background: #F5F5F5;
+	background: #FFFFFF;
 	border: 1px solid #1565C0;
 	list-style: none;
+	font-family: 'Roboto', sans-serif;
 }
-.navigation li{
+.nav-item{
 	height: 25px;
 	display: block;
+	margin: 5px 0;
 	text-align: right;
-	vertical-align: middle;
+	font-size: 1.2em;
+	color: #0D47A1;
+	padding-right: 15px;
+	border-bottom: 2px solid transparent;	
+	transition: all .25s;
 }
-.slider-1{
+.nav-item:hover{
+	cursor: pointer;
+	border-bottom:2px solid #1565C0;
+}
+.nav-item-selected{
+	background: #1565C0;
+	color: #FFFFFF;
+}
+.section-1{
 	width: 40%;
 	margin-top: 10%;
 	height: 75%;
 	border: 1px solid #1565C0;
 	border-right: none;
 	border-bottom-width: 7px;
+	overflow: hidden;
+
 }
-.slider-2{
+.section-2{
 	width: 60%;
 	margin-top: 2.5%;
 	height: 95%;
 	border: 1px solid #1565C0;
+	overflow: hidden;
+}
+.slider{
+	display: flex;
+	height: 100%;
+	width: 400%;
+}
+.slider-1{
+}
+.slider-2{
+	margin-top: -97px;
+}
+.content{
+	width: 100%;
+	height: 100%;
+	order: 2;
+	padding: 0 15px 0 25px;
+}
+.content-in{
+	animation: contentIn .75s;
+	animation-fill-mode: forwards;
+}
+.content-out{
+	animation: contentOut .25s;
+	animation-fill-mode: forwards;
+}
+@keyframes contentOut{
+	from{
+		opacity: 1;
+	}
+	to{
+		order: 2;
+		opacity: 0;
+	}
+}
+@keyframes contentIn{
+	from{
+		opacity: 0;
+	}
+	to{
+		order: 1;
+		opacity: 1;
+	}
+}
+.content span{
+	display: block;
+	font-family: 'Vollkorn', serif;
+	font-size: 7.5em;
+	color: #0D47A1;
+	padding: 0 15px 0 25px;
+
+}
+.content h2{
+	font-family: 'Vollkorn', serif;
+	font-size: 2em;
+	color: #0D47A1;
+	margin-bottom: 25px;
+	padding: 0 15px 0;
+
+}
+.content p{
+	font-family: 'Roboto', sans-serif;
+	font-size: 1.25em;
+	color: #0D47A1;
+	line-height: 150%;
+	padding: 0 15px 0 15px;
+
+}
+.content img{
+	width: 100%;
+	height: auto;
 }
