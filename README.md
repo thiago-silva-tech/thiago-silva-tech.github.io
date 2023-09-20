@@ -1,3 +1,3 @@
-# [thiago-hs.github.io](https://thiago-hs.github.io/)
+# [thiago-silva-tech.github.io](https://thiago-silva-tech.github.io/)
 
 Meu site de portfólio.
